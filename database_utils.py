@@ -38,7 +38,7 @@ class DatabaseConnector:
         DATABASE = 'sales_data'
         PORT = 5432
         self.sql_engine = sa.create_engine(f"{database_type}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
-        #with self.sql_engine.connect().execution_options(autocommit=True) as conn:
-        #    df.to_sql(table_name, con = conn, if_exists = 'replace', index = False)
+        #with self.sql_engine.connect().execution_options(autocommit=True) as con:
+        #    df.to_sql(table_name, con = con, if_exists = 'replace', index = False)
 
 
